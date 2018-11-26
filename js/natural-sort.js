@@ -1,14 +1,14 @@
 import _characterFold from 'isotropic-character-fold';
 import _Error from 'isotropic-error';
 
-const _lexicographicOrderRegexp = /^[+-]?\d+(?:\.[+-]?\d+){2,}$/,
+const _lexicographicOrderRegexp = /^[+-]?\d+(?:\.[+-]?\d+){2,}$/u,
 
     _splitString = string => {
         const split = [];
 
         let lastIndex = 0;
 
-        string.replace(/([+-]?\d+(?:\.[+-]?\d+)*)/g, (match, numbers, index) => {
+        string.replace(/([+-]?\d+(?:\.[+-]?\d+)*)/gu, (match, numbers, index) => {
             split.push(string.substring(lastIndex, index));
             split.push(match);
             lastIndex = index + match.length;
