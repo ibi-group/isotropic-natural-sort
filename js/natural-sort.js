@@ -2,7 +2,6 @@ import _characterFold from 'isotropic-character-fold';
 import _Error from 'isotropic-error';
 
 const _lexicographicOrderRegexp = /^[+-]?\d+(?:\.[+-]?\d+){2,}$/u,
-
     _splitString = string => {
         const split = [];
 
